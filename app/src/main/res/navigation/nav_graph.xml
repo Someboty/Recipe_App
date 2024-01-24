@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.recipeapp.ui.home.HomeFragment"
+        android:label="@string/home_fragment_title"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/homeShowDetails"
+            app:destination="@+id/recipeDetailsFragment">
+            <argument
+                android:name="recipeId"
+                app:argType="long" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeDetailsFragment"
+        android:name="com.example.recipeapp.ui.details.FragmentDetails"
+        android:label="@string/details_fragment_title"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="recipeId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.recipeapp.ui.favorite.FavoritesFragment"
+        android:label="@string/favorites_fragment_title"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/favoriteShowDetails"
+            app:destination="@id/recipeDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.recipeapp.ui.settings.SettingsFragment"
+        android:label="@string/settings_fragment_title"
+        tools:layout="@layout/fragment_settings"/>
+</navigation>

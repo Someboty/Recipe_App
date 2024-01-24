@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Recipe App</string>
+    <string name="recipe_image_description">Recipe photo</string>
+    <string name="favorites_icon_description_false">This recipe is not marked as a favorite</string>
+    <string name="favorites_icon_description_true">You have marked this recipe as one of your favorites</string>
+    <string name="recipe_time_icon_description">The cooking time is:</string>
+    <string name="recipe_vegan_description_false">This recipe is not vegan</string>
+    <string name="recipe_vegan_text">Vegan</string>
+    <string name="recipe_vegetarian_text">Vegetarian</string>
+    <string name="recipe_gluten_free_text">Gluten Free</string>
+    <string name="recipe_dairy_free_text">Dairy Free</string>
+    <string name="recipe_healthy_text">Healthy</string>
+    <string name="recipe_cheap_text">Cheap</string>
+    <string name="recipe_title_example">Cannellini Bean and Asparagus Salad with Mushrooms</string>
+    <string name="recipe_summary_example">Cannellini Bean and Asparagus Salad with Mushrooms requires approximately <b>45 minutes</b> from start to finish. This main course has <b>482 calories</b>, <b>31g of protein</b>, and <b>6g of fat</b> per serving. This gluten free, dairy free, lacto ovo vegetarian, and vegan recipe serves 6 and costs <b>$1.35 per serving</b>. 309 people were impressed by this recipe. Head to the store and pick up grain mustard, sea salt, lemon zest, and a few other things to make it today. It is brought to you by foodandspice.blogspot.com. Taking all factors into account, this recipe <b>earns a spoonacular score of 70%</b>, which is pretty good. Similar recipes are <a href="https://spoonacular.com/recipes/cannellini-bean-salad-422994">Cannellini Bean Salad</a>, <a href="https://spoonacular.com/recipes/refreshing-cannellini-bean-salad-113127">Refreshing Cannellini Bean Salad</a>, and <a href="https://spoonacular.com/recipes/cannellini-and-green-bean-salad-33177">Cannellini-and-Green Bean Salad</a>.</string>
+    <string name="recipe_instructions_example">Rinse the cannellini beans and soak for 8 hours or overnight in several inches of water. Drain and rinse, then transfer to a medium saucepan and cover with fresh water. Add the curry leaves or bay leaf and bring to a boil. Reduce heat to medium-low, cover, and simmer for 1 hour or until the beans are tender but not falling apart. Drain and transfer to a large salad bowl.Meanwhile, snap the woody ends off of the asparagus spears and steam the spears for 6 minutes or until just tender but still retaining their crunch. Transfer to the salad bowl.Now cook the mushrooms. Heat the oil in a large skillet over high heat. As soon as the oil is hot, drop in the mushrooms and cook, stirring constantly, for 5 minutes or until the mushrooms begin to brown and lose some of their liquid. Transfer to the bowl with the asparagus.To make the dressing, combine the tarragon, lemon zest, garlic, lemon juice, olive oil and mustard in a small food processor or blender. Process until smooth.Pour the dressing over the salad, season with salt and pepper, and toss. Serve at room temperature or chilled.</string>
+    <string name="settings_recipe_amount_example">10</string>
+    <string name="recipe_time_example">45</string>
+    <string name="recipe_favorites_example">309</string>
+    <string name="home_fragment_title">Recipes</string>
+    <string name="details_fragment_title">Details</string>
+    <string name="favorites_fragment_title">Favorite</string>
+    <string name="settings_fragment_title">Settings</string>
+    <string name="menu_search_icon_description">Open the search bar for recipes.</string>
+    <string name="menu_favorite_icon_description">Add this recipe to favorites</string>
+    <string name="menu_back_icon_description">Back to previous page</string>
+    <string name="menu_search_bar_hint">Pasta</string>
+    <string name="home_fragment_fab_description">Opens the menu for filtering recipes by meal type and dietary preferences.</string>
+    <string name="recipe_details_tab_overview_title">Overview</string>
+    <string name="recipe_details_tab_ingredients_title">Ingredients</string>
+    <string name="recipe_details_tab_instructions_title">Instructions</string>
+    <string name="settings_recipe_amount_title">Recipe amount</string>
+    <string name="settings_recipe_amount_descriptions_text">Recipes on home page</string>
+    <string name="settings_save_button_text">Save</string>
+    <string name="settings_recipe_amount_incorrect_snackbar_message_value">Please enter the number of recipes to display within the range of 1 to 100.</string>
+    <string name="details_getting_recipe_failed_message_value">Cannot get details on recipe. Check your internet connection</string>
+    <string name="settings_recipe_amount_incorrect_exception_text">Wrong recipe amount input: </string>
+    <string name="details_recipe_id_missing">Failed to receive a recipe id in details</string>
+    <string name="recipe_instructions_placeholder">Uh-oh! The chef seems to have hidden the instructions for this recipe. How about giving it a try and letting your creativity shine? 🍳</string>
+</resources>

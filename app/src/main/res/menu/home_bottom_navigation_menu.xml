@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_bottom_recipes_unchecked"
+        android:title="@string/home_fragment_title"/>
+    <item
+        android:id="@+id/favoritesFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_favorite_uncheked"
+        android:title="@string/favorites_fragment_title"/>
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_bottom_settings_unchecked"
+        android:title="@string/settings_fragment_title"/>
+</menu>

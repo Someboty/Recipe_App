@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_overview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/details_overview_recipe_image"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:contentDescription="@string/recipe_image_description"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/details_overview_recipe_title"
+        tools:src="@drawable/white_bean_salad"/>
+
+    <TextView
+        android:id="@+id/details_overview_recipe_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceHeadline6"
+        android:layout_margin="@dimen/spacing_normal"
+        app:layout_constraintBottom_toTopOf="@+id/details_overview_recipe_characteristics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_overview_recipe_image"
+        tools:text="@string/recipe_title_example"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/details_overview_recipe_characteristics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/details_overview_summary_scroll"
+        app:layout_constraintTop_toBottomOf="@+id/details_overview_recipe_title">
+
+        <TextView
+            android:id="@+id/details_overview_recipe_characteristics_vegetarian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_vegetarian_text"
+            android:textColor="@color/characteristic_false_grey"
+            app:drawableStartCompat="@drawable/ic_details_characteristics_false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/details_overview_recipe_characteristics_gluten_free"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/details_overview_recipe_characteristics_vegan"/>
+
+        <TextView
+            android:id="@+id/details_overview_recipe_characteristics_gluten_free"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_gluten_free_text"
+            app:drawableStartCompat="@drawable/ic_details_characteristics_false"
+            app:layout_constraintStart_toEndOf="@+id/details_overview_recipe_characteristics_vegetarian"
+            app:layout_constraintEnd_toStartOf="@+id/details_overview_recipe_characteristics_healthy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/details_overview_recipe_characteristics_dairy_free"/>
+
+        <TextView
+            android:id="@+id/details_overview_recipe_characteristics_healthy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_healthy_text"
+            app:drawableStartCompat="@drawable/ic_details_characteristics_false"
+            app:layout_constraintBottom_toTopOf="@+id/details_overview_recipe_characteristics_cheap"
+            app:layout_constraintEnd_toStartOf="@+id/details_overview_favorites"
+            app:layout_constraintStart_toEndOf="@+id/details_overview_recipe_characteristics_gluten_free"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/details_overview_recipe_characteristics_vegan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_vegan_text"
+            app:drawableStartCompat="@drawable/ic_details_characteristics_false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/details_overview_recipe_characteristics_dairy_free"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_overview_recipe_characteristics_vegetarian" />
+
+        <TextView
+            android:id="@+id/details_overview_recipe_characteristics_dairy_free"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_dairy_free_text"
+            app:drawableStartCompat="@drawable/ic_details_characteristics_false"
+            app:layout_constraintStart_toEndOf="@id/details_overview_recipe_characteristics_vegan"
+            app:layout_constraintEnd_toStartOf="@+id/details_overview_recipe_characteristics_cheap"
+            app:layout_constraintTop_toBottomOf="@id/details_overview_recipe_characteristics_gluten_free"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/details_overview_recipe_characteristics_cheap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_cheap_text"
+            app:drawableStartCompat="@drawable/ic_details_characteristics_false"
+            app:layout_constraintStart_toEndOf="@id/details_overview_recipe_characteristics_dairy_free"
+            app:layout_constraintEnd_toStartOf="@+id/details_overview_ready_in_minutes"
+            app:layout_constraintTop_toBottomOf="@id/details_overview_recipe_characteristics_healthy"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/details_overview_favorites"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/like_red"
+            app:drawableStartCompat="@drawable/ic_likes"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/details_overview_ready_in_minutes"
+            app:layout_constraintStart_toEndOf="@+id/details_overview_recipe_characteristics_healthy"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/recipe_favorites_example" />
+
+        <TextView
+            android:id="@+id/details_overview_ready_in_minutes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/time_yellow"
+            app:drawableStartCompat="@drawable/ic_timer"
+            app:layout_constraintStart_toEndOf="@+id/details_overview_recipe_characteristics_cheap"
+            app:layout_constraintTop_toBottomOf="@+id/details_overview_favorites"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/recipe_time_example"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/details_overview_summary_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacing_normal"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_overview_recipe_characteristics">
+
+        <TextView
+            android:id="@+id/details_overview_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            tools:text="@string/recipe_summary_example" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

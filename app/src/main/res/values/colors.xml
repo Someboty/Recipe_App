@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#669DF6</color>
+    <color name="primaryLightColor">#9CCEFF</color>
+    <color name="primaryDarkColor">#266FC3</color>
+    <color name="secondaryColor">#A142F4</color>
+    <color name="secondaryLightColor">#D774FF</color>
+    <color name="secondaryDarkColor">#6B00C0</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#FFFFFF</color>
+    <color name="like_red">#B22222</color>
+    <color name="time_yellow">#996300</color>
+    <color name="characteristic_false_grey">#333333</color>
+    <color name="characteristic_true_green">#6DB33F</color>
+    <color name="characteristics_true">#4CAF50</color>
+    <color name="recipe_border_secondary">#B1BCBE</color>
+    <color name="favorite_yellow">#FAD02C</color>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_small"
+    android:background="@drawable/recipe_border" >
+
+    <ImageView
+        android:id="@+id/favorite_recipe_image"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:contentDescription="@string/recipe_image_description"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/favorite_recipe_content_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/white_bean_salad" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/favorite_recipe_content_layout"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:padding="@dimen/spacing_normal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/favorite_recipe_image"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <TextView
+            android:id="@+id/favorite_recipe_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textAppearance="?textAppearanceHeadline6"
+            app:layout_constraintBottom_toTopOf="@+id/favorite_recipe_summary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/recipe_title_example" />
+
+        <TextView
+            android:id="@+id/favorite_recipe_summary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:maxLines="3"
+            app:layout_constraintBottom_toTopOf="@+id/favorite_recipe_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/favorite_recipe_title"
+            tools:text="@string/recipe_summary_example" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/favorite_recipe_details"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/spacing_normal"
+            app:layout_constraintTop_toBottomOf="@+id/favorite_recipe_summary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/favorite_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/like_red"
+                app:drawableTopCompat="@drawable/ic_likes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/favorite_ready_in_minutes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/recipe_favorites_example" />
+
+            <TextView
+                android:id="@+id/favorite_ready_in_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/time_yellow"
+                app:drawableTopCompat="@drawable/ic_timer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/favorite_vegan"
+                app:layout_constraintStart_toEndOf="@id/favorite_likes"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/recipe_time_example"/>
+
+            <TextView
+                android:id="@+id/favorite_vegan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_vegan_text"
+                android:textAlignment="center"
+                android:textColor="@color/characteristic_false_grey"
+                app:drawableTopCompat="@drawable/ic_vegan_false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/favorite_ready_in_minutes"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
